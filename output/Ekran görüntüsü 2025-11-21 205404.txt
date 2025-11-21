@@ -1,0 +1,50 @@
+Automate Weekly Trigger Strategy (TradingView >
+Brokerage) With Multi-TP Automation
+
+Postedyesterday Worldwide
+
+‘G2 Specialized profiles can help you better highlight your expertise when submitting proposals to
+Jobs like these. Create a specialized profile.
+
+‘Summary
+
+''m looking for an experienced developer who can automate my TradingView strategy on the weekly
+‘timeframe, including multiple take-profit (TP) levels, and connect it to any automation platform such as,
+‘TraderPost, Capitalise.al, Zapler-based webhook routing, or custom AP! integration.
+
+Project Requirements:
++ Review and understand my TradingView strategy (weekdy trigger system).
+
++ Automate entries + multiple TP exits exactly as defined inside my TradingView script.
+
++ Engure that alllogko—entries, SL, TP/TP2/TP3—Is controlled from Pine Script.
+
++ Integrate the alerts to TraderPost OR any alternative platform that can send orders to my brokerage.
+* Verify extended-hours functionality, Including:
+
++ If TPs get executed In pre-market / after-market
+
++ Whether the automation service supports extended-hours routing
+
++ Any limitations or required settings
+
+‘Additional Task:
+‘You may need to communicste with TraderPost (or the chosen platform) support to confirm technical
+details, or guide me on exactly what to ask them:
+
++"Im automating a weelty strategy with multiple TP points controlled from TradingView.
+
+‘Will TP orders trigger in pre-market or after-hours if price hits those levels?”
+
+= Confirm webhook formatting, order flags, and routing settings.
+
+Ideal Candidate:
++= Strong experience with TradingView Pine Script (v5/V6)
++ Experience with TraderPost or any automation platform
+
+‘Aclean, rellable setup where my TradingView script sends automated trades with multiple take-profit
+targets to my brokerage—even If targets hit during extended hours.
+
+@ s1o000 ®) intermediate
+Firod-price lam looking fora mixof
+experience and value
