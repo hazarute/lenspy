@@ -6,128 +6,138 @@ The application runs from the command line and requires minimal configuration.
 
 ## 🚀 Features
 
-  * **Format Support:** Supports `.jpg`, `.png`, and `.jpeg` formats.
-  * **Fast Output:** Saves text to the `output/` folder within a file-based structure.
-  * **Language Support:** You can use all languages supported by Tesseract.
-  * **Open Source:** The code is clean and compatible with the standard Python library.
+- **Format Support:** Supports `.jpg`, `.png`, and `.jpeg` formats.
+- **Fast Output:** Saves text to the `output/` folder in a file-per-image structure.
+- **Language Support:** Use any language supported by Tesseract.
+- **Open Source:** Small, dependency-light codebase.
 
 ## 🛠️ Requirements
 
-To run this project, the following software must be installed on your computer:
+To run this project, install the following:
 
-1.  **Python 3.x**
-2.  **Tesseract-OCR Engine:** Download and install the [UB-Mannheim installer](https://github.com/UB-Mannheim/tesseract/wiki) for Windows; use package managers for Linux and Mac.
+1. **Python 3.x**
+2. **Tesseract-OCR Engine** — on Windows the UB-Mannheim build is recommended.
+
+Windows users: download and install from the UB-Mannheim releases and note the installed path (for example `C:\Program Files\Tesseract-OCR\tesseract.exe`).
 
 ## 📦 Installation
 
-1.  Clone Lenspy and switch to the directory:
+1. Clone Lenspy and switch to the directory:
 
-    ```bash
-    git clone https://github.com/username/Lenspy.git
-    cd Lenspy
-    ```
+```powershell
+git clone https://github.com/hazarute/lenspy.git
+cd lenspy
+```
 
-2.  Install the necessary Python packages:
+2. Install Python dependencies:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```powershell
+pip install -r requirements.txt
+```
 
-3.  Ensure Tesseract is installed and added to your PATH, or provide the full path via `--tesseract-cmd`.
+3. Make sure Tesseract is installed. If it's not on your PATH, run the script with `--tesseract-cmd` pointing to the binary.
 
 ## 💻 Usage
 
-1.  Create an `input/` folder (or use `--input-dir` if you prefer a different folder) and place the `.jpg`, `.jpeg`, or `.png` files to be OCR'd inside.
+1. Create an `input/` folder (or use `--input-dir`) and place `.jpg`/`.jpeg`/`.png` files there.
 
-2.  Run the following command in the terminal:
+2. Run the script:
 
-    ```bash
-    python main.py
-    ```
+```powershell
+python main.py
+```
 
-3.  The script lists the images in the `input/` folder by number, then asks you to enter a number, filename, or full path.
+3. The script lists images in `input/` by number; you can enter a number, filename, or full path.
 
-4.  By default, the OCR output is written to `output/<image_name>.txt`. You can specify a custom file with `-o/--output` or use a different folder with `--output-dir`.
+4. By default output is written to `output/<image_name>.txt`. Use `-o/--output` to set a filename or `--output-dir` to change the folder.
 
-5.  You can set the Tesseract language with the `--lang` parameter or point to a custom binary with `--tesseract-cmd`.
+5. Example: run with a custom Tesseract binary on Windows PowerShell:
+
+```powershell
+python main.py --tesseract-cmd "C:\Program Files\Tesseract-OCR\tesseract.exe" --lang eng
+```
 
 ## 📂 Project Structure
 
 ```
-Lenspy/
-├── main.py          # Script managing the OCR flow
-├── README.md        # This documentation
-├── requirements.txt # Pillow and pytesseract dependencies
-├── input/           # Folder where images to be OCR'd are placed
-└── output/          # .txt outputs generated for each image
+lenspy/
+├── main.py
+├── README.md
+├── requirements.txt
+├── input/
+└── output/
 ```
-## 📞 Contact
 
-Hazar Ute - hazarute@gmail.com
+## License
 
-Project Link: [https://github.com/hazarute/lenspy](https://github.com/hazarute/lenspy)
+This project is licensed under the MIT License — see the `LICENSE` file for details.
+
+## Contributing
+
+Contributions are welcome. Please open issues or pull requests on the GitHub repository. A basic `.gitignore` is recommended for local virtual environments (`venv/`) and Python cache files (`__pycache__/`, `*.pyc`).
+
+## Contact
+
+Hazar Ute — hazarute@gmail.com
+Project Link: https://github.com/hazarute/lenspy
 
 -----
 
+## Türkçe — Lenspy
+
 **Lenspy**, görsellerin içerisindeki metinleri tarayıp bunları düzenlenebilir `.txt` dosyasına dönüştüren basit, hafif ve açık kaynaklı bir Python uygulamasıdır.
 
-Uygulama komut satırından çalışır ve olabildiğince az ayar gerektirir.
+Uygulama komut satırından çalışır ve minimum ayar gerektirir.
 
 ## 🚀 Özellikler
 
-* **Format Desteği:** `.jpg`, `.png` ve `.jpeg` formatlarını destekler.
-* **Hızlı Çıktı:** Dosya bazlı bir yapı içinde `output/` klasörüne metin kaydeder.
-* **Dil Desteği:** Tesseract’ın desteklediği tüm dilleri kullanabilirsiniz.
-* **Açık Kaynak:** Kodun tamamı sade ve Python standart kütüphanesiyle uyumludur.
+- **Format Desteği:** `.jpg`, `.png` ve `.jpeg` formatları desteklenir.
+- **Hızlı Çıktı:** Her görsel için `output/` içinde bir `.txt` dosyası oluşturulur.
+- **Dil Desteği:** Tesseract'ın desteklediği diller kullanılabilir.
 
 ## 🛠️ Gereksinimler
 
-Bu projeyi çalıştırmak için bilgisayarınızda şu yazılımlar bulunmalıdır:
+1. **Python 3.x**
+2. **Tesseract-OCR Motoru** — Windows için UB-Mannheim sürümü önerilir.
 
-1.  **Python 3.x**
-2.  **Tesseract-OCR Motoru:** Windows için [UB-Mannheim installer](https://github.com/UB-Mannheim/tesseract/wiki) indirip kurun; Linux ve Mac için paket yöneticilerini kullanın.
+Windows kullanıcıları: UB-Mannheim sürümünü indirip yükleyin ve kurulum yolunu not edin (ör: `C:\Program Files\Tesseract-OCR\tesseract.exe`).
 
 ## 📦 Kurulum
 
-1.  Lenspy’ı klonlayın ve dizine geçin:
-    ```bash
-    git clone https://github.com/hazarute/lenspy.git
-    cd Lenspy
-    ```
-
-2.  Gerekli Python paketlerini yükleyin:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3.  Tesseract’ın kurulu ve PATH’e ekli olduğundan emin olun veya `--tesseract-cmd` ile tam yolu verin.
+```powershell
+git clone https://github.com/hazarute/lenspy.git
+cd lenspy
+pip install -r requirements.txt
+```
 
 ## 💻 Kullanım
 
-1.  `input/` klasörünü oluşturun (veya farklı klasör kullanacaksanız `--input-dir`) ve OCR yapılacak `.jpg`, `.jpeg` veya `.png` dosyalarını buraya yerleştirin.
-2.  Terminalden şu komutu çalıştırın:
+1. `input/` klasörünü oluşturun veya `--input-dir` ile farklı bir klasör belirtin ve görselleri buraya koyun.
+2. Aşağıdaki komutla çalıştırın:
 
-    ```bash
-    python main.py
-    ```
-
-3.  Script `input/` klasöründeki görselleri numaralı olarak listeler, ardından bir sayı, dosya adı veya tam yol girmenizi ister.
-4.  OCR çıktısı varsayılan olarak `output/<gorsel_adi>.txt` dosyasına yazılır. `-o/--output` ile özel bir dosya belirtebilir, `--output-dir` ile farklı klasör kullanabilirsiniz.
-5.  `--lang` parametresiyle Tesseract dilini ayarlayabilir, `--tesseract-cmd` ile özel binary gösterebilirsiniz.
-
-## 📂 Proje Yapısı
-
-```
-Lenspy/
-├── main.py          # OCR akışını yöneten script
-├── README.md        # Bu dokümantasyon
-├── requirements.txt # Pillow ve pytesseract bağımlılıkları
-├── input/           # OCR yapılacak görsellerin yerleştirildiği klasör
-└── output/          # Her görsel için oluşturulan .txt çıktılar
+```powershell
+python main.py
 ```
 
-## 📞 İletişim
+3. Script, `input/` içindeki görselleri numaralandırır; numara, dosya adı veya tam yol ile seçim yapabilirsiniz.
 
-Hazar Ute - hazarute@gmail.com
+4. Varsayılan çıktı: `output/<gorsel_adi>.txt`. `-o/--output` veya `--output-dir` ile değiştirebilirsiniz.
 
-Proje Linki: [https://github.com/hazarute/lenspy](https://github.com/hazarute/lenspy)
+5. Örnek (Windows PowerShell, özel Tesseract yolu belirtilmiş):
+
+```powershell
+python main.py --tesseract-cmd "C:\Program Files\Tesseract-OCR\tesseract.exe" --lang eng
+```
+
+## Lisans
+
+Bu proje MIT lisansı ile lisanslanmıştır — ayrıntılar için `LICENSE` dosyasına bakın.
+
+## Katkı
+
+Katkılar memnuniyetle kabul edilir. Lütfen GitHub üzerinde issue veya pull request açın. Lokal virtual environmentlar (`venv/`) ve Python cache dosyaları (`__pycache__/`, `*.pyc`) için `.gitignore` kullanılması önerilir.
+
+## İletişim
+
+Hazar Ute — hazarute@gmail.com
+Proje Linki: https://github.com/hazarute/lenspy
