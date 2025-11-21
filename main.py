@@ -2,6 +2,7 @@
 
 import argparse
 import sys
+import platform
 from pathlib import Path
 from typing import Optional
 
@@ -51,7 +52,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--tesseract-cmd",
         type=Path,
-        help="Full path to the Tesseract binary if it is not on PATH.",
+        default=(Path(r"C:\Program Files\Tesseract-OCR\tesseract.exe") if platform.system() == "Windows" else None),
+        help=(
+            "Full path to the Tesseract binary if it is not on PATH. "
+            "On Windows the default is `C:\\Program Files\\Tesseract-OCR\\tesseract.exe`."
+        ),
     )
     return parser.parse_args()
 
